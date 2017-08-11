@@ -1,0 +1,15 @@
+dependencies:
+    pre:
+        - sudo apt-get install autoconf-archive automake-1.14 autoconf2.59 build-essential check
+compile:
+    override:
+        # Place here whatever commands are necessary to build your project.
+        - g++ -I/usr/local/include/opencv -I/usr/local/include/opencv2 -L/usr/local/lib/ -o binary  main.cpp -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching
+
+test:
+    pre:
+        - echo "Nothing to do here"
+    override:
+        - echo "Nothing to do here"
+
+
